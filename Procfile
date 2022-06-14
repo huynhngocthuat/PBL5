@@ -1,1 +1,1 @@
-web: gunicorn pbl5_tfjs.wsgi
+web: gunicorn pbl5tfjs.wsgi
