@@ -30,7 +30,7 @@ async function predict(){
   let img = tf.browser.fromPixels(imgShow);
   let normalizationOffset = tf.scalar(255/2); // 127.5
   let tensor = img
-          .resizeNearestNeighbor([128, 128])
+          .resizeNearestNeighbor([224, 224])
           .toFloat()
           .sub(normalizationOffset)
           .div(normalizationOffset)
