@@ -16,7 +16,8 @@ const GARBAGE_CLASS = {
   1: 'glass',
   2: 'metal',
   3: 'paper',
-  4: 'plastic'
+  4: 'plastic',
+  5: 'trash'
 };
 
 const detect = () => {
