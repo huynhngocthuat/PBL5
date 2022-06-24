@@ -12,12 +12,15 @@ const uploadImage = () => {
 };
 
 const GARBAGE_CLASS = {
-  0: 'cardboard',
-  1: 'glass',
-  2: 'metal',
-  3: 'paper',
-  4: 'plastic',
-  5: 'trash'
+  0: 'battery',
+  1: 'biological',
+  2: 'cardboard',
+  3: 'clothes',
+  4: 'glass',
+  5: 'metal',
+  6: 'paper',
+  7: 'plastic',
+  8: 'trash'
 };
 
 const detect = () => {
@@ -30,7 +33,7 @@ async function predict(){
   let img = tf.browser.fromPixels(imgShow);
   let normalizationOffset = tf.scalar(255/2); // 127.5
   let tensor = img
-          .resizeNearestNeighbor([224, 224])
+          .resizeNearestNeighbor([128, 128])
           .toFloat()
           .sub(normalizationOffset)
           .div(normalizationOffset)
