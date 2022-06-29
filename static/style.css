@@ -1,107 +1,147 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: roboto, arial, helvetica, sans-serif;
-  }
-  
-  .container {
-    height: 100vh;
-  }
-  
-  .title {
-    font-size: 40px;
-    line-height: 40px;
-    text-align: center;
-    margin: 40px 0px;
-    color: var(--main-color);
-  }
-  
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .img-show {
-    width: 500px;
-    height: 500px;
-    border-radius: 8px;
-    border: 1px solid #e8e8e8;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
-  }
-  
-  .img-show img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .right-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .btn {
-    display: flex;
-    height: 50px;
-    padding: 0;
-    background: var(--main-color);
-    justify-content: center;
-    overflow: hidden;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid #e8e8e8;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background: #008168;
-  }
-  
-  .btn:active {
-    background: #006e58;
-  }
-  
-  .btn .btn__text,
-  .btn .btn__icon {
-    display: inline-flex;
-    align-items: center;
-    padding: 0 12px;
-    color: #fff;
-    height: 100%;
-  }
-  
-  .btn__text {
-    font-size: 20px;
-    text-transform: uppercase;
-  }
-  
-  .btn__icon {
-    background: rgba(0, 0, 0, 0.08);
-  }
-  
-  .btn__icon i {
-    font-size: 32px;
-  }
-  
-  .result {
-    height: 100px;
-    padding: 0px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    border-radius: 8px;
-    border: solid 2px #e8e8e8;
-  }
-  
-  .result span {
-    color: var(--main-color);
-    font-size: 30px;
-    border-radius: 4px;
-    padding: 8px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto, arial, helvetica, sans-serif;
+}
+
+.container {
+  height: 100vh;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 40px 0px;
+  color: var(--main-color);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.img-show {
+  width: 500px;
+  height: 500px;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+}
+
+.img-show img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right-wrapper .btn-wrapper {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  height: 50px;
+  padding: 0;
+  background: var(--main-color);
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #008168;
+}
+
+.btn:active {
+  background: #006e58;
+}
+
+.btn .btn__text,
+.btn .btn__icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  color: #fff;
+  height: 100%;
+}
+
+.btn__text {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.btn__icon {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.btn__icon i {
+  font-size: 24px;
+}
+
+.result {
+  display: none;
+}
+
+.result table {
+  border-collapse: collapse;
+  width: 320px;
+  border: none;
+}
+
+.result table tbody tr {
+  height: 30px;
+  text-align: left;
+  display: flex;
+  margin: 4px;
+}
+
+.result table tbody tr:first-of-type {
+  background-color: var(--main-color);
+  border-radius: 4px;
+  height: 48px;
+}
+
+.result table tbody tr th {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  border: 0px;
+  color: white;
+  flex: 1;
+  padding: 0px 12px;
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 500;
+}
+.result table tbody tr th:first-child {
+  flex: 2;
+}
+
+.result table tbody tr td {
+  border: 0px;
+  border-bottom: solid 1px #e8e8e8;
+  flex: 1;
+  padding: 4px 12px;
+}
+
+.result table tbody tr td:first-child {
+  width: 60%;
+  flex: 2;
+  color: var(--main-color);
+}
