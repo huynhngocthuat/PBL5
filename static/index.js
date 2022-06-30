@@ -31,12 +31,10 @@ async function predict() {
   $("#result").hide();
   // 1. Chuyển ảnh về tensor
   let img = tf.browser.fromPixels(imgShow);
-  let normalizationOffset = tf.scalar(255 / 2); // 127.5
   let tensor = img
     .resizeNearestNeighbor([128, 128])
     .toFloat()
-    .sub(normalizationOffset)
-    .div(normalizationOffset)
+    .div(255)
     .expandDims();
   // 2. Predict
   let predictions = await model.predict(tensor);
